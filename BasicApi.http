@@ -1,0 +1,32 @@
+@BasicApi_HostAddress = http://localhost:5263
+
+### Get All Books
+GET {{BasicApi_HostAddress}}/api/books
+Accept: application/json
+
+### Get Book by Id
+GET {{BasicApi_HostAddress}}/api/books/2
+Accept: application/json
+
+### Create Book
+POST {{BasicApi_HostAddress}}/api/books
+Content-Type: application/json
+{
+  "title": "Title5",
+  "author": "Author5",
+  "yearPublished": 2005
+}
+
+### Update Book
+PUT {{BasicApi_HostAddress}}/api/books/6
+Content-Type: application/json
+{
+  "id": 6,
+  "title": "Title6",
+  "author": "Author6",
+  "yearPublished": 2022
+}
+
+### Delete Book
+DELETE {{BasicApi_HostAddress}}/api/books/6
+Accept: application/json
